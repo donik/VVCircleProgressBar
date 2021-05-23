@@ -118,7 +118,7 @@ open class VVCircleProgressBar: UIView {
         animation.toValue = 1.3
         animation.duration = 0.8
         animation.autoreverses = true
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         animation.repeatCount = Float.infinity
         pulsingLayer.add(animation, forKey: "Pulsing")
     }
@@ -137,7 +137,7 @@ open class VVCircleProgressBar: UIView {
         layer.strokeColor = strokeColor.cgColor
         layer.lineWidth = 20
         layer.fillColor = fillColor.cgColor
-        layer.lineCap = kCALineCapRound
+        layer.lineCap = CAShapeLayerLineCap.round
         layer.position = self.center
         return layer
     }
